@@ -1,8 +1,8 @@
 
-const up = "UP";
-const down = "DOWN";
-const left = "LEFT";
-const right = "RIGHT";
+const up = 0;
+const down = 2;
+const left = 3;
+const right = 1;
 
 function KeyboardInputManager() {
   this.events = {};
