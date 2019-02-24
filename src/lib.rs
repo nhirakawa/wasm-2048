@@ -8,7 +8,6 @@ mod manager;
 mod position;
 mod tile;
 
-use manager::Manager;
 use wasm_bindgen::prelude::*;
 
 cfg_if! {

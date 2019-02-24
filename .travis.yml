@@ -6,6 +6,10 @@ install:
   - nvm install v10.5
   - curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh -s -- -f
 
+before_script:
+  - rustup component add clippy
+
 script:
   - npm install
   - npm run build
+  - cargo clippy -- -D warnings
