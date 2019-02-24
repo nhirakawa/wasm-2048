@@ -1,14 +1,14 @@
 body {
-    font-family: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-    background: silver;
+  font-family: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  background: silver;
 }
 
 .banner {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    width: 100%;
-    font-size: 48pt;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+  font-size: 48pt;
 }
 
 body {
@@ -17,16 +17,18 @@ body {
   padding: 1em 0;
 }
 
+.container {
+  margin-left: 25%;
+}
+
 .wrapper {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-
   justify-items: center;
   align-items: center;
 }
-
 
 .box {
   background-color: #444;
@@ -41,7 +43,7 @@ body {
   height: 60px;
   text-align: center;
   vertical-align: middle;
-  line-height: 60px;   
+  line-height: 60px;
 }
 
 .box:nth-child(even) {
@@ -50,8 +52,82 @@ body {
 }
 
 /* If Grid is supported, remove the margin we set for the fallback */
+
 @supports (display: grid) {
   .module {
     margin: 0;
   }
+}
+
+@keyframes move-up {
+  0% {
+    top: 25px;
+    opacity: 1;
+  }
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+.value-2 {
+  color:#776e65;
+  background: #eee4da;
+}
+
+
+.value-4 {
+  color: #776e65;
+  background: #ede0c8;
+}
+
+.value-8 {
+  color: #f9f6f2;
+  background: #f2b179;
+}
+
+.value-16 {
+  color: #f9f6f2;
+  background: #f95963;
+}
+
+.value-32 {
+  color: #f9f6f2;
+  background: #f67c5f;
+}
+
+.value-64 {
+  color: #f9f6f2;
+  background: #f65e3b;
+}
+
+.value-128 {
+  color: #f9f6f2;
+  background: #edcf72;
+}
+
+.value-256 {
+  color: #f9f6f2;
+  background: #edcc61;
+}
+
+.value-512 {
+  color: #f9f6f2;
+  background: #edc580;
+}
+
+.value-1024 {
+  color: #f9f6f2;
+  background: #edc53f;
+}
+
+.value-2048 {
+  color: #f9f6f2;
+  background: #edc22e;
+  font-size: 35px;
+}
+
+.value-large {
+  color: #f9f6f2;
+  background: #3c3a32;
 }
