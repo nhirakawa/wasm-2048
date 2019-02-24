@@ -1,11 +1,12 @@
 import { Tile } from './tile';
 import { Grid } from './grid';
 
-function GameManager(size, InputManager, Actuator, StorageManager) {
+function GameManager(size, InputManager, Actuator, StorageManager, wasmManager) {
   this.size = size; // Size of the grid
   this.inputManager = new InputManager;
   this.storageManager = new StorageManager;
   this.actuator = new Actuator;
+  this.wasmManager = wasmManager;
 
   this.startTiles = 2;
 
@@ -144,6 +145,8 @@ GameManager.prototype.move = function (direction) {
   if (this.isGameTerminated()) {
     return; // Don't do anything if the game's over
   }
+
+  self.wasmManager.handle_direction_event(direction);
 
   var cell, tile;
 

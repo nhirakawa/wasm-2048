@@ -34,12 +34,12 @@ impl Manager {
         self.grid.height()
     }
 
-    pub fn handle_event(&self, direction: &str) {
+    pub fn handle_direction_event(&self, direction: u8) {
         match direction {
-            "UP" => self.print(),
-            "DOWN" => self.print(),
-            "LEFT" => self.print(),
-            "RIGHT" => self.print(),
+            0 => log!("up"),    // up
+            1 => log!("right"), // right
+            2 => log!("down"),  // down
+            3 => log!("left"),  // left
             _otherwise => panic!("unsupported direction"),
         };
     }

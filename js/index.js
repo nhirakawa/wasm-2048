@@ -30,6 +30,6 @@ import("../pkg").then(module => {
 
   console.log(tiles);
 
-  let game_manager = new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
+  let game_manager = new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager, manager);
   game_manager.setStartTiles(tiles);
 });
