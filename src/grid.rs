@@ -1,6 +1,5 @@
-
-extern crate wasm_bindgen;
 extern crate js_sys;
+extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 
@@ -51,5 +50,9 @@ impl Grid {
 
     pub fn height(&self) -> usize {
         self.height
+    }
+
+    pub fn get_tile(&self, index: usize) -> Tile {
+        self.tiles[index]
     }
 }

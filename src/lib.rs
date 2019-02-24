@@ -5,6 +5,7 @@ extern crate web_sys;
 
 mod grid;
 mod manager;
+mod position;
 mod tile;
 
 use manager::Manager;
@@ -36,9 +37,6 @@ cfg_if! {
 #[wasm_bindgen]
 pub fn run() -> Result<(), JsValue> {
     set_panic_hook();
-
-    let manager = Manager::new(4, 4);
-    manager.print();
 
     Ok(())
 }

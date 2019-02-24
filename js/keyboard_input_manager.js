@@ -134,7 +134,8 @@ KeyboardInputManager.prototype.listen = function () {
 
 KeyboardInputManager.prototype.restart = function (event) {
   event.preventDefault();
-  this.emit("restart");
+  alert("unsupported");
+  // this.emit("restart");
 };
 
 KeyboardInputManager.prototype.keepPlaying = function (event) {

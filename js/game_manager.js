@@ -54,7 +54,7 @@ GameManager.prototype.setup = function () {
     this.keepPlaying = false;
 
     // Add the initial tiles
-    this.addStartTiles();
+    // this.addStartTiles();
   }
 
   // Update the actuator
@@ -64,9 +64,16 @@ GameManager.prototype.setup = function () {
 // Set up the initial tiles to start the game with
 GameManager.prototype.addStartTiles = function () {
   for (var i = 0; i < this.startTiles; i++) {
-    this.addRandomTile();
+    debugger;
   }
 };
+
+GameManager.prototype.setStartTiles = function (tiles) {
+  for (var index in tiles) {
+    this.grid.insertTile(tiles[index]);
+  }
+  console.log(this.grid.cells);
+}
 
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {

@@ -9,6 +9,7 @@ macro_rules! log {
 }
 
 use grid::Grid;
+use tile::Tile;
 
 use wasm_bindgen::prelude::*;
 
@@ -41,6 +42,10 @@ impl Manager {
             "RIGHT" => self.print(),
             _otherwise => panic!("unsupported direction"),
         };
+    }
+
+    pub fn get_tile(&self, index: usize) -> Tile {
+        self.grid.get_tile(index)
     }
 
     pub fn print(&self) {
