@@ -44,6 +44,14 @@ impl Manager {
         };
     }
 
+    pub fn handle_restart(&self) {
+        log!("restart");
+    }
+
+    pub fn handle_keep_playing(&self) {
+        log!("keep playing");
+    }
+
     pub fn get_tile(&self, index: usize) -> Tile {
         self.grid.get_tile(index)
     }
